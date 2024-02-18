@@ -1,0 +1,12 @@
+RSET API-JSON
+GET/users-HTML Document Render
+GET /api/users-List all users
+
+GET/api/users/1-Get the user with Id 1
+GET/api/users/2-Get the user with Id 2
+
+POST/api /users-create new user
+
+PATCH/api/user/1-Edit the user with Id 1
+
+DELETE/api/user/1-Delete the user wih Id 1
