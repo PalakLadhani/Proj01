@@ -31,6 +31,8 @@ app.get("/users", (req, res) => {
 
 //REST API
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-myName", "Shivam Asati"); //custom headers
+  //Always add X to custom headers
   return res.json(users);
 });
 
@@ -54,7 +56,7 @@ app.post("/api/users", (req, res) => {
   const body = req.body;
   users.push({ ...body, id: users.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ status: "sucess", id: users.length });
+    return res.status(201).json({ status: "sucess", id: users.length });
   });
   //TODO:Create new user
 });
