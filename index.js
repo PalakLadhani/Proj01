@@ -7,10 +7,10 @@ const userRouter = require("./routes/user");
 const app = express();
 const PORT = 8000;
 
-connectMongoDb(" mongodb://127.0.0.1:27017/Palak19");
-
 // Connection
-mongoose.connect("mongodb://127.0.0.1:27017/Palak19");
+connectMongoDb("mongodb://127.0.0.1:27017/Palak19").then(() =>
+  console.log("Mongodb connected!")
+);
 
 // Middleware - Plugin
 app.use(express.urlencoded({ extended: false }));
